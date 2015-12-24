@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 사용법</title>
+    <style>
+        body {
+            font-size: 9pt;
+        }
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+        #panel {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #999;
+            position: relative;
+        }
+        #nav {
+            text-align: center;
+            width: 600px;
+        }
+        #bar {
+            position: absolute;
+            left: 50px;
+            top:190px;
+            width: 500px;
+            height: 20px;
+            background: #F30;
+        }
+
+    </style>
+    <script src="libs/jquery-1.11.3.min.js">
+        /*
+        1.먼저 jQuery 사용하려면, jQuery기능이 들어있는 라이브러리 파일 연결.
+         */
+    </script>
+    <script>
+        /*
+        2.ready()이용해서 초기 시작점을 정함.
+         */
+        $(document).ready(function(){
+           /*
+            3. jQuery를 이용해서 노드 찾기.
+             */
+            var $fish=$("#fish");
+            //var $divs=$("div");
+            $("#btnStart").click(function(){
+                $fish.animate({
+                    left: "480px"
+                },1000)
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="panel">
+        <div id="bar"></div>
+        <img src="fish.png" id="fish">
+    </div>
+
+    <div id="nav">
+        <button id="btnStart">
+            물고기 움직이기
+        </button>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>글자색을 빨간색으로 변경</title>
+    <style>
+
+    </style>
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script>
+/*
+        window.onload=function(){
+            //먼저 #menu2를 찾음
+           var menu2=document.getElementById("menu2");
+            //#menu2 태그중의 li 태그를 찾음.
+           var liList=menu2.getElementsByTagName("li");
+            //li태그를 하나씩 접근해 글자색 변경
+            for(var i=0;i<liList.length;i++){
+                var li=liList[i];
+                li.style.color="#f00";
+            }
+*/
+        $(document).ready(function(){
+            $("#menu2 li").css("color","#f00");
+        })
+
+    </script>
+</head>
+<body>
+    <div>
+        <p>#menu2의 li태크 스타일 속성 중 글자색을 모두 빨간색으로 변경</p>
+    </div>
+    <ul class="menu" id="menu1">
+        <li>MacBook</li>
+        <li>MacBook Air</li>
+        <li>MacBook Pro</li>
+        <li>iMac</li>
+        <li>Mac Pro</li>
+        <li>Mac mini</li>
+        <li>Accessories</li>
+    </ul>
+    <ul class="menu" id="menu2">
+        <li>iPad Pro</li>
+        <li>iPad Air2</li>
+        <li>iPad Air</li>
+        <li>iPad mini4</li>
+        <li>iPad mini2</li>
+    </ul>
+</body>
+</html>
